@@ -380,6 +380,8 @@ static void clang_indexSourceFile_Impl(void *UserData) {
     *out_TU = CXTU->takeTU();
 
   ITUI->result = 0; // success.
+
+  BufOwner.get()->Buffers.clear();
 }
 
 //===----------------------------------------------------------------------===//
